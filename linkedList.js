@@ -84,3 +84,12 @@ class LinkedList {
         return this.#length;
     }
 
+    /**
+     * Returns the first node in the list.
+     * 
+     * @returns {Node} - The first node in the linked list.
+     */
+    head() {
+        return this.#headNode;
+    }
+
