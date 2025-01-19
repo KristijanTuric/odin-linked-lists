@@ -34,6 +34,7 @@ class LinkedList {
         this.#length = 0;
     }
 }
+
     /**
      * Appends a new node with the given value to the end of the linked list.
      * If the list is empty, the new node becomes the head of the list.
@@ -60,3 +61,17 @@ class LinkedList {
             this.#length++;
         }
     }
+
+    /**
+     * Adds a new node with the given value to the beginning of the list.
+     * 
+     * @param {*} value - The value to store in the new node.
+     * 
+     * @returns {void} - This method does not return anything. It modifies the linked list.
+     */
+    prepend(value) {
+        let node = this.#headNode;
+        this.#headNode = new Node(value);
+        this.#headNode.nextNode = node;
+    }
+
