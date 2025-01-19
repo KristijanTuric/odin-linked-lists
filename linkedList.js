@@ -75,3 +75,12 @@ class LinkedList {
         this.#headNode.nextNode = node;
     }
 
+    /**
+     * Returns the number of nodes in the list.
+     * 
+     * @returns {number} - The length of the linked list.
+     */
+    size() {
+        return this.#length;
+    }
+
