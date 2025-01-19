@@ -93,3 +93,17 @@ class LinkedList {
         return this.#headNode;
     }
 
+    /**
+     * Returns the last node in the list.
+     * 
+     * @returns {Node} - The last node in the linked list.
+     */
+    tail() {
+        let node = this.#headNode;
+        while (node.nextNode != null) {
+            node = node.nextNode;
+        }
+
+        return node;
+    }
+
