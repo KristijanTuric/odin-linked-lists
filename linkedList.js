@@ -107,3 +107,30 @@ class LinkedList {
         return node;
     }
 
+    /**
+     * Returns a string representation of the linked list.
+     * 
+     * If the list is empty, returns a message indicating so.
+     * Otherwise, returns a string of the form: 
+     * ( value ) -> ( value ) -> ... -> null
+     * 
+     * @returns {string} - A string representing the linked list, or a message if the list is empty.
+     */
+    toString() {
+        if (this.#headNode === null) {
+            return "This linked list is empty!";
+        } else {
+            let node = this.#headNode;
+            let nodesString = "";
+            while (node.nextNode != null) {
+                nodesString += `( ${node.value} ) -> `;
+                node = node.nextNode;
+            }
+            nodesString += `( ${node.value} ) -> `;
+            nodesString += "null";
+            return nodesString;
+        }
+    }
+}
+
+export { LinkedList };
