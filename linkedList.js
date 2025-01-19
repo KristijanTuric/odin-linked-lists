@@ -34,3 +34,29 @@ class LinkedList {
         this.#length = 0;
     }
 }
+    /**
+     * Appends a new node with the given value to the end of the linked list.
+     * If the list is empty, the new node becomes the head of the list.
+     * 
+     * @param {*} value - The value of the new node
+     * 
+     * @returns {void} - Doesn't return anything. Modifies the linked list
+     * 
+     * @example
+     * const list = new LinkedList();
+     * list.append(10);  // Adds a node with value 10 to the end of the list.
+     * list.append(20);  // Adds a node with value 20 to the end of the list
+     */
+    append(value) {
+        if (this.#headNode === null) {
+            this.#headNode = new Node(value);
+            this.#length++;
+        } else {
+            let node = this.#headNode;
+            while (node.nextNode != null) {
+                node = node.nextNode;
+            }
+            node.nextNode = new Node(value);
+            this.#length++;
+        }
+    }
