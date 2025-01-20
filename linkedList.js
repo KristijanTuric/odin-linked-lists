@@ -241,6 +241,45 @@ class LinkedList {
             return nodesString;
         }
     }
+
+    /**
+     * Inserts a new node with the specified value at the given index in the linked list.
+     * 
+     * @param {*} value - The value to store in the new node.
+     * @param {number} index - The index at which to insert the new node.
+     * 
+     * @returns {void} - This method does not return anything. It modifies the linked list.
+     * 
+     * @throws {Error} - Logs a message if the index is out of range.
+     */
+    insertAt(value, index) {
+        if (index > this.#length || index < 0) {
+            console.log("Index is out of linked list range");
+            return;
+        }
+
+        let node = this.#headNode;
+        let previousNode = null;
+        let nextNode = null;
+        let currentIndex = 0;
+
+        if (index === currentIndex) {
+            this.#headNode = new Node(value, nextNode = node);
+            this.#length++;
+            return;
+        }
+
+        while (currentIndex != index) {
+            previousNode = node;
+            node = node.nextNode;
+            currentIndex++;
+        }
+
+        nextNode = node;
+
+        previousNode.nextNode = new Node(value, nextNode);
+        this.#length++;
+    }
 }
 
 export { LinkedList };

@@ -38,6 +38,17 @@ console.log(linkedList.find(44));
 console.log(linkedList.find(6));
 console.log(linkedList.find(-5));
 
+console.log("\nTesting insertAt(value, index)\n");
+console.log(linkedList.toString());
+linkedList.insertAt(111, 0);
+console.log(linkedList.toString());
+linkedList.insertAt(111, 3);
+console.log(linkedList.toString());
+linkedList.insertAt(111, 120);
+console.log(linkedList.toString());
+linkedList.insertAt(111, -1);
+console.log(linkedList.toString());
+
 console.log("\nTesting pop()\n");
 console.log(linkedList.toString());
 linkedList.pop();
