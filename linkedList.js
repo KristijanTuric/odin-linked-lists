@@ -172,6 +172,28 @@ class LinkedList {
     }
 
     /**
+     * Checks if the linked list contains a node with the specified value.
+     * 
+     * @param {*} value - The value to search for in the linked list.
+     * 
+     * @returns {boolean} - Returns true if a node with the given value is found, otherwise false.
+     */
+    contains(value) {
+        let node = this.#headNode;
+        if (node.value === value) {
+            return true;
+        }
+        while (node.nextNode != null) {
+            node = node.nextNode;
+            if (node.value === value) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
      * Returns a string representation of the linked list.
      * 
      * If the list is empty, returns a message indicating so.

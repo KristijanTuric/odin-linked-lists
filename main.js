@@ -28,6 +28,11 @@ console.log(linkedList.at(125));
 console.log(linkedList.at(-2));
 console.log(linkedList.at(0));
 
+console.log("\nTesting contains(value)\n");
+console.log(linkedList.contains(5));
+console.log(linkedList.contains(-5));
+
+console.log("\nTesting pop()\n");
 console.log(linkedList.toString());
 linkedList.pop();
 console.log(linkedList.toString());
