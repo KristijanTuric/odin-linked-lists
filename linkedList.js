@@ -280,6 +280,41 @@ class LinkedList {
         previousNode.nextNode = new Node(value, nextNode);
         this.#length++;
     }
+
+    /**
+     * Removes the node at the specified index in the linked list.
+     * 
+     * @param {number} index - The index of the node to remove.
+     * 
+     * @returns {void} - This method does not return anything. It modifies the linked list.
+     * 
+     * @throws {Error} - Logs a message if the index is out of range.
+     */
+    removeAt(index) {
+        if (index > (this.#length - 1) || index < 0) {
+            console.log("Index is out of linked list range");
+            return;
+        }
+
+        let node = this.#headNode;
+        let previousNode = null;
+        let currentIndex = 0;
+
+        if (index === currentIndex) {
+            this.#headNode = node.nextNode;
+            this.#length--;
+            return;
+        }
+
+        while (currentIndex != index) {
+            previousNode = node;
+            node = node.nextNode;
+            currentIndex++;
+        }
+
+        previousNode.nextNode = node.nextNode;
+        this.#length--;
+    }
 }
 
 export { LinkedList };

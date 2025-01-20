@@ -49,6 +49,17 @@ console.log(linkedList.toString());
 linkedList.insertAt(111, -1);
 console.log(linkedList.toString());
 
+console.log("\nTesting removeAt(index)\n");
+console.log(linkedList.toString());
+linkedList.removeAt(0);
+console.log(linkedList.toString());
+linkedList.removeAt(3);
+console.log(linkedList.toString());
+linkedList.removeAt(120);
+console.log(linkedList.toString());
+linkedList.removeAt(-1);
+console.log(linkedList.toString());
+
 console.log("\nTesting pop()\n");
 console.log(linkedList.toString());
 linkedList.pop();
