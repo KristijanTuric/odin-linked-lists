@@ -32,6 +32,12 @@ console.log("\nTesting contains(value)\n");
 console.log(linkedList.contains(5));
 console.log(linkedList.contains(-5));
 
+console.log("\nTesting find(value)\n");
+console.log(linkedList.find(5));
+console.log(linkedList.find(44));
+console.log(linkedList.find(6));
+console.log(linkedList.find(-5));
+
 console.log("\nTesting pop()\n");
 console.log(linkedList.toString());
 linkedList.pop();

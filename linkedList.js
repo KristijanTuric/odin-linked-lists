@@ -194,6 +194,30 @@ class LinkedList {
     }
 
     /**
+     * Finds the index of the first node containing the specified value.
+     * 
+     * @param {*} value - The value to search for in the linked list.
+     * 
+     * @returns {number|null} - The index of the node containing the value, or null if not found.
+     */
+    find(value) {
+        let index = 0;
+        let node = this.#headNode;
+        if (node.value === value) {
+            return index;
+        }
+        while (node.nextNode != null) {
+            node = node.nextNode;
+            index++;
+            if (node.value === value) {
+                return index;
+            }
+        }
+
+        return null;
+    }
+
+    /**
      * Returns a string representation of the linked list.
      * 
      * If the list is empty, returns a message indicating so.
