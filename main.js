@@ -28,3 +28,11 @@ console.log(linkedList.at(125));
 console.log(linkedList.at(-2));
 console.log(linkedList.at(0));
 
+console.log(linkedList.toString());
+linkedList.pop();
+console.log(linkedList.toString());
+linkedList.pop();
+console.log(linkedList.toString());
+for(let i = 0; i < 7; i++) linkedList.pop();
+console.log(linkedList.toString());
+

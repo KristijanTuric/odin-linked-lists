@@ -136,6 +136,41 @@ class LinkedList {
     }
 
     /**
+     * Removes the last node from the linked list.
+     * 
+     * If the list has only one node, it clears the list by setting the head to null.
+     * If the list is empty, it prints out a message.
+     * 
+     * @returns {void} - This method does not return anything. It modifies the linked list.
+     * 
+     * @example
+     * const list = new LinkedList();
+     * list.append(10);
+     * list.append(20);
+     * list.pop(); // Removes the last node (20) from the list.
+     */
+    pop() {
+        if (this.#headNode === null)  {
+            console.log("You are trying to pop() and empty linked list!");
+            return;
+        }
+        if (this.#length === 1) {
+            this.#headNode = null;
+            this.#length = 0;
+            return;
+        }
+        let node = this.#headNode;
+        let previousNode = null;
+        while (node.nextNode != null) {
+            previousNode = node;
+            node = node.nextNode;
+        }
+
+        previousNode.nextNode = null;
+        this.#length--;
+    }
+
+    /**
      * Returns a string representation of the linked list.
      * 
      * If the list is empty, returns a message indicating so.
