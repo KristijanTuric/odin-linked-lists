@@ -106,6 +106,19 @@ class LinkedList {
         return node;
     }
 
+    /**
+     * Returns the node at the specified index in the linked list.
+     * 
+     * @param {number} index - The zero-based index of the node to retrieve.
+     * 
+     * @returns {Node|null} - The node at the given index, or null if the index is out of range.
+     * 
+     * @example
+     * const list = new LinkedList();
+     * list.append(10);
+     * list.append(20);
+     * list.at(1); // Returns the node containing value 20.
+     */
     at(index) {
         let selectedNode = 0;
         let node = this.#headNode;
