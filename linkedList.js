@@ -72,6 +72,7 @@ class LinkedList {
         let node = this.#headNode;
         this.#headNode = new Node(value);
         this.#headNode.nextNode = node;
+        this.#length++;
     }
 
     /**
