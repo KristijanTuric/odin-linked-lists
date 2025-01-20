@@ -33,7 +33,6 @@ class LinkedList {
         this.#headNode = null;
         this.#length = 0;
     }
-}
 
     /**
      * Appends a new node with the given value to the end of the linked list.
@@ -104,6 +103,22 @@ class LinkedList {
             node = node.nextNode;
         }
 
+        return node;
+    }
+
+    at(index) {
+        let selectedNode = 0;
+        let node = this.#headNode;
+
+        if (index < 0 || index > this.#length - 1) {
+            console.log("Index out of linked list range!");
+            return null;
+        }
+        if (selectedNode === index) return node;
+        while (selectedNode != index) {
+            node = node.nextNode;
+            selectedNode++;
+        }
         return node;
     }
 

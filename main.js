@@ -22,3 +22,9 @@ console.log(linkedList.head());
 
 console.log(linkedList.tail());
 
+console.log("\nTesting the at(index) function");
+console.log(linkedList.at(2));
+console.log(linkedList.at(125));
+console.log(linkedList.at(-2));
+console.log(linkedList.at(0));
+
